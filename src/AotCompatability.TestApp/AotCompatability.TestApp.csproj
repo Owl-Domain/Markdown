@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Project -->
+	<PropertyGroup Label="project">
+		<TargetFramework>net9.0</TargetFramework>
+		<LangVersion>13</LangVersion>
+		<OutputType>Exe</OutputType>
+		<Nullable>enable</Nullable>
+
+		<PublishAot>true</PublishAot>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<!-- Project references -->
+	<ItemGroup Label="projects">
+		<ProjectReference Include="../Markdown/Markdown.csproj" />
+		<TrimmerRootAssembly Include="OwlDomain.Markdown" />
+
+		<ProjectReference Include="../Markdown.Abstractions/Markdown.Abstractions.csproj" />
+		<TrimmerRootAssembly Include="OwlDomain.Markdown.Abstractions" />
+	</ItemGroup>
+
+</Project>
