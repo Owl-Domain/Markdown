@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Project -->
+	<PropertyGroup Label="project">
+		<TargetFrameworks>net8.0;net7.0;net6.0;netstandard2.1</TargetFrameworks>
+		<LangVersion>13</LangVersion>
+		<Nullable>enable</Nullable>
+
+		<AssemblyName>OwlDomain.Markdown.Abstractions</AssemblyName>
+		<RootNamespace>OwlDomain.Markdown</RootNamespace>
+		<Version>0.0.0</Version>
+
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Deterministic>true</Deterministic>
+
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+		<IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net7.0'))">true</IsAotCompatible>
+		<IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net6.0'))">true</IsTrimmable>
+	</PropertyGroup>
+
+	<!-- NuGet package -->
+	<PropertyGroup Label="nuget">
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+		<Authors>OwlDomain</Authors>
+		<Copyright>Copyright (c) OwlDomain 2025 - $([System.DateTime]::UtcNow.Year)</Copyright>
+
+		<RepositoryUrl>https://github.com/Owl-Domain/Markdown.git</RepositoryUrl>
+		<PackageProjectUrl>https://www.github.com/Owl-Domain/Markdown</PackageProjectUrl>
+
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageLicenseFile>license.txt</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/meta/release-notes.txt"))</PackageReleaseNotes>
+
+		<Description>A package for working with different flavours and versions of markdown formats.</Description>
+		<PackageTags>owldomain markdown</PackageTags>
+	</PropertyGroup>
+
+	<!-- Package files -->
+	<ItemGroup Label="content">
+		<None Pack="true" PackagePath="" Include="../icon.png" Link="meta/icon.png" />
+		<None Pack="true" PackagePath="" Include="../license.txt" Link="meta/license.txt" />
+		<None Pack="true" PackagePath="" Include="meta/readme.md" />
+	</ItemGroup>
+
+	<!-- Continuous integration -->
+	<PropertyGroup Label="ci">
+		<ContinuousIntegrationBuild Condition="'$(CI)' == 'true' Or '$(CI)' == '1'">true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+
+</Project>

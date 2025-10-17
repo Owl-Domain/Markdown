@@ -3,12 +3,16 @@
 <!-- Do not put the link/image nested tags on new lines as that will count the links as having whitespace which changes the rendering -->
 
 <p align="center"> <!-- Project -->
-  <!--<a title="A link to the latest version of the main NuGet package for the project." href="https://www.nuget.org/packages/OwlDomain.Markdown"><img alt="A status badge for the latest version of the main Nuget package for the project." src="https://img.shields.io/nuget/v/OwlDomain.Markdown?logo=nuget"></a>-->
   <a title="A link to the Github action workflow for building the project." href="https://github.com/Owl-Domain/Markdown/actions/workflows/build.yml"><img alt="A status badge of the Github action workflow for building the project." src="https://github.com/Owl-Domain/Markdown/actions/workflows/build.yml/badge.svg"></a>
   <a title="A link to the Github action workflow for testing the project." href="https://github.com/Owl-Domain/Markdown/actions/workflows/test.yml"><img alt="A status badge of the Github action workflow for testing the project." src="https://github.com/Owl-Domain/Markdown/actions/workflows/test.yml/badge.svg"></a>
   <!--<a title="A link to the Github action workflow for testing the AOT compatibility of the project." href="https://github.com/Owl-Domain/Markdown/actions/workflows/aot_compatibility_test.yml"><img alt="A status badge of the Github action workflow for testing the AOT compatibility of the project." src="https://github.com/Owl-Domain/Markdown/actions/workflows/aot_compatibility_test.yml/badge.svg"></a>-->
   <a title="A link to the Github action workflow for linting the project." href="https://github.com/Owl-Domain/Markdown/actions/workflows/lint.yml"><img alt="A status badge of the Github action workflow for linting the project." src="https://github.com/Owl-Domain/Markdown/actions/workflows/lint.yml/badge.svg"></a>
   <a title="A link to the Github action workflow for publishing the project." href="https://github.com/Owl-Domain/Markdown/actions/workflows/publish.yml"><img alt="A status badge of the Github action workflow for publishing the project." src="https://github.com/Owl-Domain/Markdown/actions/workflows/publish.yml/badge.svg"></a>
+</p>
+
+<p align="center"> <!-- Packages -->
+  <a title="A link to the latest version of the OwlDomain.Markdown NuGet package." href="https://www.nuget.org/packages/OwlDomain.Markdown"><img alt="A status badge for the latest version of the OwlDomain.Markdown Nuget package for the project." src="https://img.shields.io/nuget/v/OwlDomain.Markdown?logo=nuget&label=Markdown"></a>
+  <a title="A link to the latest version of the OwlDomain.Markdown.Abstractions NuGet package." href="https://www.nuget.org/packages/OwlDomain.Markdown.Abstractions"><img alt="A status badge for the latest version of the OwlDomain.Markdown.Abstractions Nuget package for the project." src="https://img.shields.io/nuget/v/OwlDomain.Markdown.Abstractions?logo=nuget&label=Markdown.Abstractions"></a>
 </p>
 
 <p align="center"> <!-- Organisation -->

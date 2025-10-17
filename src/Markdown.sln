@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		..\.github\workflows\pull_editorconfig.yml = ..\.github\workflows\pull_editorconfig.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markdown", "Markdown\Markdown.csproj", "{434C6E0E-AAEA-4C04-8972-17BA64918734}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markdown.Abstractions", "Markdown.Abstractions\Markdown.Abstractions.csproj", "{188B0DA5-ABFA-4F85-95E2-63417E1199B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{598BB746-7E95-4286-98C8-8174AE0843B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{598BB746-7E95-4286-98C8-8174AE0843B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{598BB746-7E95-4286-98C8-8174AE0843B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{434C6E0E-AAEA-4C04-8972-17BA64918734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{434C6E0E-AAEA-4C04-8972-17BA64918734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{434C6E0E-AAEA-4C04-8972-17BA64918734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{434C6E0E-AAEA-4C04-8972-17BA64918734}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188B0DA5-ABFA-4F85-95E2-63417E1199B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188B0DA5-ABFA-4F85-95E2-63417E1199B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188B0DA5-ABFA-4F85-95E2-63417E1199B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188B0DA5-ABFA-4F85-95E2-63417E1199B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
