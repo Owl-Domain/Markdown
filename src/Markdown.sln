@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markdown.Abstractions", "Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AotCompatability.TestApp", "AotCompatability.TestApp\AotCompatability.TestApp.csproj", "{C6D60CB0-A174-4909-B1EE-B4C3676671CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markdown.Tests", "Markdown.Tests\Markdown.Tests.csproj", "{6A46BDB3-D7D9-4578-849C-A304DA4E2D91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{C6D60CB0-A174-4909-B1EE-B4C3676671CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6D60CB0-A174-4909-B1EE-B4C3676671CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6D60CB0-A174-4909-B1EE-B4C3676671CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A46BDB3-D7D9-4578-849C-A304DA4E2D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A46BDB3-D7D9-4578-849C-A304DA4E2D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A46BDB3-D7D9-4578-849C-A304DA4E2D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A46BDB3-D7D9-4578-849C-A304DA4E2D91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
