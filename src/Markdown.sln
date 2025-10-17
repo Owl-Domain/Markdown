@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "local", "local", "{348B521D-7B53-4630-9322-90AC15BDDA78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playground", "local\Playground\Playground.csproj", "{598BB746-7E95-4286-98C8-8174AE0843B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{C841F5C2-8F30-5BE9-ECA6-260644CF6F9F}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\.gitattributes = ..\.gitattributes
+		..\contributing.md = ..\contributing.md
+		..\license.md = ..\license.md
+		..\readme.md = ..\readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{598BB746-7E95-4286-98C8-8174AE0843B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{598BB746-7E95-4286-98C8-8174AE0843B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{598BB746-7E95-4286-98C8-8174AE0843B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{598BB746-7E95-4286-98C8-8174AE0843B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{598BB746-7E95-4286-98C8-8174AE0843B2} = {348B521D-7B53-4630-9322-90AC15BDDA78}
+	EndGlobalSection
+EndGlobal
