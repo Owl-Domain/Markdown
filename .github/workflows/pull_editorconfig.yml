@@ -1,0 +1,16 @@
+name: update .editorconfig
+
+permissions:
+  contents: write
+  pull-requests: write
+
+on:
+  repository_dispatch: # React to update event
+    types: [editorconfig-update]
+  workflow_dispatch: # Allow manual runs
+
+jobs:
+  pull_editorconfig:
+    uses: Owl-Domain/editorconfig/.github/workflows/pull_editorconfig.yml@main
+    with:
+      base: develop
