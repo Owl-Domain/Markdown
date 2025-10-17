@@ -16,6 +16,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{C841F5C2-8
 		..\readme.md = ..\readme.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{218B6F35-38A8-8894-4A45-A70D6B0063B3}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\build.yml = ..\.github\workflows\build.yml
+		..\.github\workflows\test.yml = ..\.github\workflows\test.yml
+		..\.github\workflows\lint.yml = ..\.github\workflows\lint.yml
+		..\.github\workflows\publish.yml = ..\.github\workflows\publish.yml
+		..\.github\workflows\pull_editorconfig.yml = ..\.github\workflows\pull_editorconfig.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
