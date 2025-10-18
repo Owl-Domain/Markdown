@@ -20,6 +20,11 @@
 		<IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net6.0'))">true</IsTrimmable>
 	</PropertyGroup>
 
+	<!-- Package references -->
+	<ItemGroup Label="packages">
+		<PackageReference Include="OwlDomain.Common" Version="1.7.0" />
+	</ItemGroup>
+
 	<!-- NuGet package -->
 	<PropertyGroup Label="nuget">
 		<IncludeSymbols>true</IncludeSymbols>
