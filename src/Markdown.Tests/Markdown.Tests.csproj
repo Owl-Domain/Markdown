@@ -10,6 +10,7 @@
 		<RootNamespace>OwlDomain.Markdown.Tests</RootNamespace>
 
 		<UseVSTest>true</UseVSTest>
+		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 
 	<!-- Project references -->
@@ -19,8 +20,8 @@
 
 	<!-- Package references -->
 	<ItemGroup Label="packages">
-		<PackageReference Include="OwlDomain.Testing.MSTest" Version="1.2.0" />
-		<PackageReference Include="OwlDomain.Testing.Assertions" Version="1.4.0" />
+		<PackageReference Include="OwlDomain.Testing.MSTest" Version="1.3.0" />
+		<PackageReference Include="OwlDomain.Testing.Assertions" Version="1.4.1" />
 	</ItemGroup>
 
 </Project>
