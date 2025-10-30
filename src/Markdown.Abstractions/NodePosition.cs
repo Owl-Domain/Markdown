@@ -13,7 +13,7 @@ public readonly struct NodePosition
 	public readonly Position End { get; }
 
 	/// <summary>The amount of text elements that the node takes up.</summary>
-	public readonly int Length => checked(End.Index - Start.Index + 1);
+	public readonly int Length => checked(End.Offset - Start.Offset + 1);
 
 	/// <summary>The amount of lines that the node spans.</summary>
 	public readonly int LineCount => checked(End.Line - Start.Line + 1);
@@ -32,7 +32,7 @@ public readonly struct NodePosition
 	/// </exception>
 	public NodePosition(Position start, Position end)
 	{
-		if (start.Index > end.Index)
+		if (start.Offset > end.Offset)
 			Throw.New.ArgumentException(nameof(end), $"Expected the end position ({end}) to be after the start position ({start}).");
 
 		Start = start;

@@ -5,20 +5,20 @@ public sealed class PositionTests
 {
 	#region Constructor tests
 	[TestMethod]
-	public void Constructor_WithNegativeIndex_ThrowsArgumentOutOfRangeException()
+	public void Constructor_WithNegativeOffset_ThrowsArgumentOutOfRangeException()
 	{
 		// Arrange
-		const string expectedParameterName = "index";
-		const int index = -1, line = 1, column = 1;
+		const string expectedParameterName = "offset";
+		const int offset = -1, line = 1, column = 1;
 
 		// Act
-		static void Act() => _ = new Position(index, line, column);
+		static void Act() => _ = new Position(offset, line, column);
 
 		// Assert
 		Assert.That
 			.ThrowsExactException(Act, out ArgumentOutOfRangeException exception)
 			.AreEqual(exception.ParamName, expectedParameterName)
-			.AreEqual(exception.ActualValue, index);
+			.AreEqual(exception.ActualValue, offset);
 	}
 
 	[DataRow(0, DisplayName = "Line zero")]
@@ -28,10 +28,10 @@ public sealed class PositionTests
 	{
 		// Arrange
 		const string expectedParameterName = "line";
-		const int index = 0, column = 1;
+		const int offset = 0, column = 1;
 
 		// Act
-		void Act() => _ = new Position(index, line, column);
+		void Act() => _ = new Position(offset, line, column);
 
 		// Assert
 		Assert.That
@@ -47,10 +47,10 @@ public sealed class PositionTests
 	{
 		// Arrange
 		const string expectedParameterName = "column";
-		const int index = 0, line = 1;
+		const int offset = 0, line = 1;
 
 		// Act
-		void Act() => _ = new Position(index, line, column);
+		void Act() => _ = new Position(offset, line, column);
 
 		// Assert
 		Assert.That
@@ -63,15 +63,15 @@ public sealed class PositionTests
 	public void Constructor_WithValidValues_SetsExpectedProperties()
 	{
 		// Arrange
-		const int index = 1, line = 2, column = 3;
+		const int offset = 1, line = 2, column = 3;
 
 		// Act
-		static Position Act() => new(index, line, column);
+		static Position Act() => new(offset, line, column);
 
 		// Assert
 		Assert.That
 			.DoesNotThrowAnyException(Act, out Position result)
-			.AreEqual(result.Index, index)
+			.AreEqual(result.Offset, offset)
 			.AreEqual(result.Line, line)
 			.AreEqual(result.Column, column);
 	}

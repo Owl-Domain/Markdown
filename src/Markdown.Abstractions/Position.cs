@@ -18,9 +18,9 @@ public readonly struct Position :
 	#endregion
 
 	#region Properties
-	/// <summary>The character based index inside of the parsed text.</summary>
+	/// <summary>The text element based offset inside of the parsed text.</summary>
 	/// <remarks>This value is zero-based and it will never be negative.</remarks>
-	public readonly int Index { get; }
+	public readonly int Offset { get; }
 
 	/// <summary>The line inside of the parsed text.</summary>
 	/// <remarks>This value is one-based and it will never be negative.</remarks>
@@ -33,24 +33,24 @@ public readonly struct Position :
 
 	#region Constructors
 	/// <summary>Creates a new instance of the <see cref="Position"/>.</summary>
-	/// <param name="index">The character based index inside of the parsed text.</param>
+	/// <param name="offset">The text element based offset inside of the parsed text.</param>
 	/// <param name="line">The line inside of the parsed text.</param>
 	/// <param name="column">The column inside of the parsed text.</param>
 	/// <exception cref="ArgumentOutOfRangeException">
 	/// 	Thrown if either:
 	/// 	<list type="bullet">
-	/// 		<item>The given <paramref name="index"/> is negative (less than <c>0</c>).</item>
+	/// 		<item>The given <paramref name="offset"/> is negative (less than <c>0</c>).</item>
 	/// 		<item>The given <paramref name="line"/> is less than <c>1</c>.</item>
 	/// 		<item>The given <paramref name="column"/> is less than <c>1</c>.</item>
 	/// 	</list>
 	/// </exception>
-	public Position(int index, int line, int column)
+	public Position(int offset, int line, int column)
 	{
-		index.ThrowIfLessThan(0, nameof(index));
+		offset.ThrowIfLessThan(0, nameof(offset));
 		line.ThrowIfLessThan(1, nameof(line));
 		column.ThrowIfLessThan(1, nameof(column));
 
-		Index = index;
+		Offset = offset;
 		_line = line - 1;
 		_column = column - 1;
 	}
@@ -58,13 +58,13 @@ public readonly struct Position :
 
 	#region Methods
 	/// <inheritdoc/>
-	public override string ToString() => $"({Index}, {Line}, {Column})";
+	public override string ToString() => $"({Offset}, {Line}, {Column})";
 
 	/// <inheritdoc/>
 	public bool Equals(Position other)
 	{
 		return
-			Index == other.Index &&
+			Offset == other.Offset &&
 			_line == other._line &&
 			_column == other._column;
 	}
@@ -79,21 +79,21 @@ public readonly struct Position :
 	}
 
 	/// <inheritdoc/>
-	public int CompareTo(Position other) => Index.CompareTo(other.Index);
+	public int CompareTo(Position other) => Offset.CompareTo(other.Offset);
 
 	/// <inheritdoc/>
-	public override int GetHashCode() => HashCode.Combine(Index, _line, _column);
+	public override int GetHashCode() => HashCode.Combine(Offset, _line, _column);
 	#endregion
 
 	#region Helpers
 	private string DebuggerDisplay()
 	{
 		const string typeName = nameof(Position);
-		const string indexName = nameof(Index);
+		const string offsetName = nameof(Offset);
 		const string lineName = nameof(Line);
 		const string columnName = nameof(Column);
 
-		return $"{typeName} {{ {indexName} = ({Index:n0}), {lineName} = ({Line}:n0), {columnName} = ({Column}) }}";
+		return $"{typeName} {{ {offsetName} = ({Offset:n0}), {lineName} = ({Line}:n0), {columnName} = ({Column}) }}";
 	}
 	#endregion
 
